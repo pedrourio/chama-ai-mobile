@@ -19,18 +19,14 @@ export default function Vitor() {
         setResultado('');
     }
 
-    const LinhaTeclado = (t1: any, t2: any, t3: any)=>{
-        return <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>{t1}{t2}{t3}</ThemedView>
+    const Teclado = ()=>{
+        return <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>{Tecla()}{Tecla()}{Tecla()}</ThemedView>
 
     }
 
     const Tecla = () =>{
         return <TouchableOpacity style={{ backgroundColor: '#FFFFFF' }} onPress={() => imprime(1)}>1</TouchableOpacity>
 
-    }
-
-    const teclado = () => {
-        
     }
 
     return (
@@ -43,7 +39,9 @@ export default function Vitor() {
                     </ScrollView>
                 </ThemedView>
                 <ThemedView style={{ backgroundColor: 'gray', padding: 10, marginBottom: 10 }}>
-                    {LinhaTeclado(Tecla, Tecla, Tecla)}
+                    {Teclado()}
+                    {Teclado()}
+                    {Teclado()}
                 </ThemedView>
             </ThemedView>
         </ThemedView>
