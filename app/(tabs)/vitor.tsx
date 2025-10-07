@@ -19,6 +19,20 @@ export default function Vitor() {
         setResultado('');
     }
 
+    const LinhaTeclado = (t1: any, t2: any, t3: any)=>{
+        return <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>{t1}{t2}{t3}</ThemedView>
+
+    }
+
+    const Tecla = () =>{
+        return <TouchableOpacity style={{ backgroundColor: '#FFFFFF' }} onPress={() => imprime(1)}>1</TouchableOpacity>
+
+    }
+
+    const teclado = () => {
+        
+    }
+
     return (
         <ThemedView style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'gray', flex: 1, flexDirection: 'column' }}>
             <ThemedText>Calculadora!</ThemedText>
@@ -29,26 +43,7 @@ export default function Vitor() {
                     </ScrollView>
                 </ThemedView>
                 <ThemedView style={{ backgroundColor: 'gray', padding: 10, marginBottom: 10 }}>
-                    <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>
-                        <TouchableOpacity style={{ backgroundColor: '#FFFFFF' }} onPress={() => imprime(1)}>1</TouchableOpacity>
-                        <TouchableOpacity style={{ backgroundColor: '#FFFFFF' }} onPress={() => imprime(2)}>2</TouchableOpacity>
-                        <TouchableOpacity style={{ backgroundColor: '#FFFFFF' }} onPress={() => imprime(3)}>3</TouchableOpacity>
-                    </ThemedView>
-                    <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>
-                        <ThemedText>1</ThemedText>
-                        <ThemedText>1</ThemedText>
-                        <ThemedText>1</ThemedText>
-                    </ThemedView>
-                    <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>
-                        <ThemedText>1</ThemedText>
-                        <ThemedText>1</ThemedText>
-                        <ThemedText>1</ThemedText>
-                    </ThemedView>
-                    <ThemedView style={{ flexDirection: 'row', padding: 10, width: 100, justifyContent: 'space-between' }}>
-                        <TouchableOpacity style={{ backgroundColor: '#FFFFFF' }} onPress={limpa}>LIMPAR</TouchableOpacity>
-                    </ThemedView>
-
-
+                    {LinhaTeclado(Tecla, Tecla, Tecla)}
                 </ThemedView>
             </ThemedView>
         </ThemedView>
